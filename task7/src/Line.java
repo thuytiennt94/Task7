@@ -71,7 +71,7 @@ public class Line {
     public String toString() {
         return "Line[" + "begin=" + begin + ", end=" + end + ']';
     }
-    public Point getLength(){
+    public double getLength(){
         return begin.distance(end);
     }
 }

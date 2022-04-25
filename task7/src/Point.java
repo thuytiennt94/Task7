@@ -30,22 +30,27 @@ public class Point {
         return "Point = ("  + x + "," + y + ")";
     }
     public int[] getXY(){
-        return new int[2];
+        int arr[] = new int[2];
+        arr[0]=x;
+        arr[1]=y;
+        return arr;
     }
     public void setXY(int x, int y){
         this.x = x;
         this.y = y;
     }
     public double distance(int x, int y){
-        this.x= x;
-        this.y=y;
-        return x-y;
+        return Math.sqrt((x - this.x)* (x - this.x) + (y- this.y)*(y- this.y));
     }
-    public Point distance(Point another){
-        return another;
+    public double distance(Point another){
+        return Math.sqrt((another.x - this.x)* (another.x - this.x) + (another.y- this.y)*(another.y- this.y));
     }
-    public void distance(){
-        new Point(0,0);
-        return ;
+    public double distance(){
+        return distance(0,0);
     }
+
+    /*public static void main(String[] args) {
+        Point pt = new Point(3,4);
+        System.out.println("XY " + pt.getXY()[1]);
+    }*/
 }

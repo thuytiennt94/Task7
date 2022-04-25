@@ -55,7 +55,7 @@ public class Circle {
     public double getCircumference(){
         return 2.0 * Math.PI * radius;
     }
-    public Point distance(Circle another){
+    public double distance(Circle another){
         return center.distance(another.center);
     }
 
